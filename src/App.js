@@ -70,12 +70,9 @@ class App extends Component{
     }});
   }
 
-//  componentDidMount(){
-//    fetch('http://localhost:3001/').then(response => response.json()).then(console.log);
-//  }
+
 
   calculateFacelocation = (data) => {
-    //console.log(data);
     const clarifaiFace =  data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputImage');
     const width = Number(image.width);
@@ -149,7 +146,7 @@ class App extends Component{
                   <FaceRecognition box={box} imageUrl={imageUrl} />
                 </div>
               : (
-                route === 'signIn'
+                route === 'signIn' || route==='signout'
                 ? <SignIn loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
                 : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
                 )
