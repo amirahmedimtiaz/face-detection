@@ -73,10 +73,7 @@ class App extends Component{
 
 
   calculateFacelocation = (data) => {
-<<<<<<< HEAD
-=======
     
->>>>>>> 96bb5e1657a06ba6f6cc971f9e2f06eaf18a39b6
     const clarifaiFace =  data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputImage');
     const width = Number(image.width);
